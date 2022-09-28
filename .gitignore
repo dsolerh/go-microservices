@@ -1,0 +1,6 @@
+project/db-data/
+authentication-service/authApp
+front-end/frontApp.exe
+front-end/.DS_Store
+front-end/cmd/.DS_Store
+broker-service/brokerApp
