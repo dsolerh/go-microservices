@@ -6,3 +6,4 @@ front-end/cmd/.DS_Store
 broker-service/brokerApp
 logger-service/cmd/api/routes.go
 project/Makefile
+logger-service/loggerApp
