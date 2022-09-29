@@ -8,3 +8,4 @@ logger-service/cmd/api/routes.go
 project/Makefile
 logger-service/loggerApp
 project/docker-compose.yml
+mail-service/mailerApp
