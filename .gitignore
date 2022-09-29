@@ -4,3 +4,4 @@ front-end/frontApp.exe
 front-end/.DS_Store
 front-end/cmd/.DS_Store
 broker-service/brokerApp
+logger-service/cmd/api/routes.go
