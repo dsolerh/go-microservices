@@ -59,6 +59,8 @@ func main() {
 	// start RPC server
 	go app.listenRPC()
 
+	go app.grpcListen()
+
 	// start web server
 	app.serve()
 }
@@ -92,8 +94,6 @@ func (app *Config) listenRPC() error {
 		}
 		go rpc.ServeConn(rpcConn)
 	}
-
-	return nil
 }
 
 func connectToMongo() (*mongo.Client, error) {
