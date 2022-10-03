@@ -2,13 +2,25 @@ version: '3'
 
 services:
 
-  
+  caddy:
+    image: dsolerh/micro-caddy:1.0.0
+    deploy:
+        mode: replicated
+        replicas: 1
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
 
   front-service:
     image: dsolerh/front-service:1.0.0
     deploy:
       mode: replicated
       replicas: 1
+    environment:
+      BROKER_URL: "http://backend"
   
   broker-service:
     image: dsolerh/broker-service:1.0.1
@@ -94,3 +106,7 @@ services:
     volumes:
       - ./db-data/rabbitmq/:/var/lib/rabbitmq/
   
+volumes:
+  caddy_data:
+    external: true
+  caddy_config:
