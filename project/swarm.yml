@@ -15,7 +15,7 @@ services:
       - caddy_config:/config
 
   front-service:
-    image: dsolerh/front-service:1.0.0
+    image: dsolerh/front-service:1.0.1
     deploy:
       mode: replicated
       replicas: 1
