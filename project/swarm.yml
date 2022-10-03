@@ -1,10 +1,14 @@
 version: '3'
 
 services:
+  front-service:
+    image: dsolerh/front-service:1.0.0
+    deploy:
+      mode: replicated
+      replicas: 1
+  
   broker-service:
-    image: dsolerh/broker-service:1.0.0
-    ports:
-      - "8080:80"
+    image: dsolerh/broker-service:1.0.1
     deploy:
       mode: replicated
       replicas: 1
