@@ -1,6 +1,9 @@
 version: '3'
 
 services:
+
+  
+
   front-service:
     image: dsolerh/front-service:1.0.0
     deploy:
