@@ -69,8 +69,6 @@ services:
       mode: global
     ports:
       - "5432:5432"
-    deploy:
-      mode: global
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
