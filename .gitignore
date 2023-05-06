@@ -11,3 +11,4 @@ project/docker-compose.yml
 mail-service/mailerApp
 listener-service/listenerApp
 front-end/frontApp
+.DS_Store
